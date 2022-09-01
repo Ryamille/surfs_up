@@ -19,9 +19,12 @@ The data for June shows that it would be a given that the shop would thrive thro
 From the data gathered, it shows that Oahu during one of the coldest months of the year is still somewhat on the warmer side. This would mean that buisness should be able to run throughout the whole year. 
 
 Another point of data to gather is percipitation. The following code will allow you to do this for both months:
-###June
+### June
+
 session.query(Measurement.date,Measurement.prcp).filter(extract('month',Measurement.date)==6).all()
-###December
+
+### December
+
 session.query(Measurement.date,Measurement.prcp).filter(extract('month',Measurement.date)==12).all()
 
 Both of this would be put in place of the temperature filter.
