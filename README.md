@@ -14,6 +14,14 @@ The purpsose of this challenge was to gather the temperature trends for the mont
 * The 50 and 75 percents are 71 and 74 degrees respectively.
 * At its lowest point, the temperture decreased to 56 degrees.
 
-##Summary
+## Summary
 The data for June shows that it would be a given that the shop would thrive throught the month. It also showed that it stay relatively warm the whole month. 
 From the data gathered, it shows that Oahu during one of the coldest months of the year is still somewhat on the warmer side. This would mean that buisness should be able to run throughout the whole year. 
+
+Another point of data to gather is percipitation. The following code will allow you to do this for both months:
+###June
+session.query(Measurement.date,Measurement.prcp).filter(extract('month',Measurement.date)==6).all()
+###December
+session.query(Measurement.date,Measurement.prcp).filter(extract('month',Measurement.date)==12).all()
+
+Both of this would be put in place of the temperature filter.
